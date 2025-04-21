@@ -1,0 +1,199 @@
+{
+  "name": "My workflow",
+  "nodes": [
+    {
+      "parameters": {
+        "rule": {
+          "interval": [
+            {
+              "field": "cronExpression",
+              "expression": "5 16 * * 1-5"
+            }
+          ]
+        }
+      },
+      "type": "n8n-nodes-base.scheduleTrigger",
+      "typeVersion": 1.2,
+      "position": [
+        60,
+        0
+      ],
+      "id": "99d8afb7-d812-475b-81ab-f5169193ae8d",
+      "name": "US Financial Markets Daily Report"
+    },
+    {
+      "parameters": {
+        "url": "https://newsapi.org/v2/everything?q=tesla&from=2025-03-20&sortBy=publishedAt&apiKey=4685fd2d56a444d7bee66960b1b36d7c",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        240,
+        140
+      ],
+      "id": "a1c9302c-6014-4043-b71a-339f6fda8caf",
+      "name": "HTTP Request"
+    },
+    {
+      "parameters": {
+        "jsCode": "// // Access all input items\n// const inputData = $input.all();\n\n// // Process each item to create a structured output\n// const outputData = inputData.map(item => {\n//   const { title, author, source } = item.json;  // Destructure the input data\n  \n//   // Construct the output for each item\n//   return {\n//     json: {\n//       title: title || \"{{ s$input.first().json.articles[0].titletatus }}\",  // Default to \"No Title\" if title is missing\n//       author: author || \"Unknown Author\",  // Default to \"Unknown Author\" if author is missing\n//       source: source || \"Unknown Source\",  // Default to \"Unknown Source\" if source is missing\n//     }\n//   };\n// });\n\n// // Return the processed output data\n// return outputData;\n\n\n\n\n\n// Check if input data exists and has items property\nconst inputItems = $input.all()[0]?.json?.articles || [];\n\n// Process each item in the array\nconst processedItems = inputItems.map(item => {\n  return {\n    title: item.title || \"No Title\",\n    author: item.author || \"Unknown Author\", \n    source: {\n      id: item.source?.id || null,\n      name: item.source?.name || \"Unknown Source\"\n    },\n    url: item.url || \"\",\n    urlToImage: item.urlToImage || \"\",\n    publishedAt: item.publishedAt || \"\",\n    content: item.content || \"\"\n  };\n});\n\n// Return the processed array\nreturn {\n  json: {\n    articles: processedItems\n  }\n};"
+      },
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        480,
+        0
+      ],
+      "id": "6fdc99e7-722e-4fb2-8ecc-0643ce0d42b8",
+      "name": "Code"
+    },
+    {
+      "parameters": {
+        "html": "<!DOCTYPE html>\n<html>\n<head>\n  <meta charset=\"UTF-8\" />\n  <title>News Digest</title>\n</head>\n<body>\n  <div class=\"container\">\n\n    {{ $json.articles.map(article => `\n      <div class=\"article\">\n        <h1>${article.title}</h1>\n        <h2>Author: ${article.author || 'Unknown'} | Source: ${article.source?.name || 'N/A'}</h2>\n        <p><em>Published: ${article.publishedAt}</em></p>\n        ${article.urlToImage ? `<img src=\"${article.urlToImage}\" alt=\"Image\" style=\"max-width:100%;\"/>` : ''}\n        <p>${article.content}</p>\n        <p><a href=\"${article.url}\" target=\"_blank\">Read full article</a></p>\n      </div>\n    `).join('') }}\n\n  </div>\n</body>\n</html>\n\n<style>\nbody {\n  background: #f3f4f6;\n  font-family: Arial, sans-serif;\n  padding: 16px;\n}\n.container {\n  background-color: #ffffff;\n  padding: 24px;\n  border-radius: 10px;\n  box-shadow: 0 2px 8px rgba(0,0,0,0.1);\n}\n.article {\n  border-bottom: 1px solid #ddd;\n  margin-bottom: 20px;\n  padding-bottom: 16px;\n}\n.article h1 {\n  color: #ff6d5a;\n  font-size: 22px;\n}\n.article h2 {\n  color: #555;\n  font-size: 16px;\n}\n.article p {\n  color: #333;\n  font-size: 14px;\n}\n</style>\n\n<script>\nconsole.log(\"News Page Rendered!\");\n</script>\n"
+      },
+      "type": "n8n-nodes-base.html",
+      "typeVersion": 1.2,
+      "position": [
+        700,
+        0
+      ],
+      "id": "81edf118-5575-49af-911d-37f8344003d2",
+      "name": "HTML"
+    },
+    {
+      "parameters": {
+        "mode": "raw",
+        "jsonOutput": "{\n  \"language\": \"fr\"\n}\n",
+        "includeOtherFields": true,
+        "options": {}
+      },
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.4,
+      "position": [
+        920,
+        0
+      ],
+      "id": "1d3b44d7-e0ab-4904-af16-5378655fe030",
+      "name": "Edit Fields"
+    },
+    {
+      "parameters": {
+        "text": "{{ $json[\"html\"] }}",
+        "translateTo": "={{ $json[\"language\"] }}\n"
+      },
+      "type": "n8n-nodes-base.googleTranslate",
+      "typeVersion": 2,
+      "position": [
+        1220,
+        0
+      ],
+      "id": "c6368355-6ba7-4681-9e7b-d105a388f93f",
+      "name": "Google Translate",
+      "credentials": {
+        "googleTranslateOAuth2Api": {
+          "id": "R05ySdWp4DKoipEV",
+          "name": "Google Translate account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "sendTo": "saurabhsingh802213@gmail.com",
+        "subject": "={{ $json.html }}",
+        "emailType": "text",
+        "message": "hare krishna",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.gmail",
+      "typeVersion": 2.1,
+      "position": [
+        940,
+        200
+      ],
+      "id": "3fe9f543-c982-4195-a2c6-637b673e5593",
+      "name": "Gmail",
+      "webhookId": "a13013b2-2a19-41f9-9a9f-7bb876c1e191",
+      "credentials": {
+        "gmailOAuth2": {
+          "id": "59JrGoCJJnTuodxd",
+          "name": "Gmail account"
+        }
+      }
+    }
+  ],
+  "pinData": {},
+  "connections": {
+    "US Financial Markets Daily Report": {
+      "main": [
+        [
+          {
+            "node": "HTTP Request",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "HTTP Request": {
+      "main": [
+        [
+          {
+            "node": "Code",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Code": {
+      "main": [
+        [
+          {
+            "node": "HTML",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "HTML": {
+      "main": [
+        [
+          {
+            "node": "Edit Fields",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "Gmail",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Edit Fields": {
+      "main": [
+        [
+          {
+            "node": "Google Translate",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "active": false,
+  "settings": {
+    "executionOrder": "v1"
+  },
+  "versionId": "26ecf5ed-bce1-4f39-94ab-ba4ffd97427e",
+  "meta": {
+    "templateCredsSetupCompleted": true,
+    "instanceId": "18a66b98b64399463dd60691e0881919a6df8e15401e845c4a167228a7289d8e"
+  },
+  "id": "O0PRphxe6eypFYfD",
+  "tags": []
+}
