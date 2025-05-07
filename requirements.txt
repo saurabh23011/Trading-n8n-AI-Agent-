@@ -1,0 +1,17 @@
+streamlit
+youtube-transcript-api
+pytube
+opencv-python-headless
+tensorflow
+transformers
+pandas
+matplotlib
+Pillow
+numpy
+easyocr
+opencv-python
+moviepy
+whisper 
+transformers
+torch
+numpy

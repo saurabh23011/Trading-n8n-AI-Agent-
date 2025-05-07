@@ -1,0 +1,274 @@
+Detailed OCR Results
+==================================================
+
+Image: image 2.jpg
+--------------------------------------------------
+Text: Title Slide., Confidence: 0.91
+Text: should introduce the persoh you're, Confidence: 0.61
+Text: writing your biagraphy about. You must type, Confidence: 0.79
+Text: his/her name in the text box at the, Confidence: 0.75
+Text: of, Confidence: 0.96
+Text: the screen_, Confidence: 0.95
+Text: and add a picture of the person, Confidence: 0.63
+Text: You will want to keep the title slide simple:, Confidence: 0.58
+Text: You, Confidence: 1.00
+Text: top, Confidence: 0.86
+
+Image: image 4.png
+--------------------------------------------------
+Text: Executive Summary Template, Confidence: 0.84
+Text: with Market and Competitive Landscape Insights,, Confidence: 0.91
+Text: Issues and, Confidence: 1.00
+Text: Challenges, Achievements, Confidence: 0.92
+Text: Market, Confidence: 0.68
+Text: Write vourtext here: This is a placeholder Write vour text, Confidence: 0.51
+Text: here. This is a placeholder Write yourtext here, This is a, Confidence: 0.79
+Text: Description, Confidence: 1.00
+Text: placeholder Write your text here , Confidence: 0.70
+Text: Write vour text here: This is a placeholder Write your text, Confidence: 0.50
+Text: Competitive, Confidence: 0.94
+Text: here. This is, Confidence: 0.95
+Text: placeholder Write yourtext here. This is a, Confidence: 0.83
+Text: Landscape, Confidence: 0.99
+Text: placeholder; Write your text here, Confidence: 0.79
+Text: Issues and, Confidence: 0.93
+Text: Write your text here: This is a placeholder: Write your text, Confidence: 0.54
+Text: here. This Is, Confidence: 0.77
+Text: placeholder: Write yourtext here: This is a, Confidence: 0.51
+Text: Challenges, Confidence: 0.98
+Text: placeholder Write, Confidence: 1.00
+Text: text here_, Confidence: 1.00
+Text: Main, Confidence: 1.00
+Text: Write vourtext here: This is a placeholder Write vour text, Confidence: 0.51
+Text: here. This is a placeholder Write yourtext here, This is a, Confidence: 0.79
+Text: Achievements, Confidence: 1.00
+Text: placeholder Write your text here , Confidence: 0.70
+Text: your, Confidence: 0.96
+
+Image: image .jpg
+--------------------------------------------------
+Text: B, Confidence: 1.00
+Text: How to write some text here, Confidence: 0.73
+Text: Name of the Title, Confidence: 0.93
+Text: Presented by Author Name, Confidence: 0.95
+Text: Supervisor:supervisor name, Confidence: 0.81
+Text: Name of Department, Confidence: 0.89
+Text: ABC Institute of Technology, Confidence: 0.80
+
+Image: image3.png
+--------------------------------------------------
+Text: 1often, Confidence: 0.72
+Text: tell people, Confidence: 0.94
+Text: that they should, Confidence: 0.92
+Text: not, Confidence: 1.00
+Text: treat, Confidence: 1.00
+Text: their slides, Confidence: 0.99
+Text: as, Confidence: 0.86
+Text: their speaker, Confidence: 0.86
+Text: notes_, Confidence: 0.99
+Text: Most people, Confidence: 0.71
+Text: think that might be, Confidence: 0.97
+Text: an, Confidence: 1.00
+Text: exaggeration ., Confidence: 0.99
+Text: However, |, Confidence: 0.66
+Text: RECENTLY, Confidence: 1.00
+Text: watched, Confidence: 1.00
+Text: a, Confidence: 1.00
+Text: webinar, Confidence: 0.95
+Text: where, Confidence: 1.00
+Text: the presenter, Confidence: 0.55
+Text: literally, Confidence: 0.86
+Text: had, Confidence: 1.00
+Text: all of their speaker, Confidence: 0.78
+Text: notes, Confidence: 0.99
+Text: on, Confidence: 0.99
+Text: the, Confidence: 1.00
+Text: slides_, Confidence: 0.97
+Text: EVERY, Confidence: 1.00
+Text: SINGLE, Confidence: 1.00
+Text: WORD they said, Confidence: 0.82
+Text: was, Confidence: 1.00
+Text: on, Confidence: 0.99
+Text: the, Confidence: 1.00
+Text: screen, Confidence: 0.96
+Text: In, Confidence: 1.00
+Text: short paragraph s, Confidence: 0.66
+Text: Iike this ., Confidence: 0.67
+Text: We all had, Confidence: 0.85
+Text: to, Confidence: 1.00
+Text: read, Confidence: 1.00
+Text: their, Confidence: 0.99
+Text: whole presentation ,, Confidence: 0.99
+Text: word, Confidence: 1.00
+Text: for, Confidence: 1.00
+Text: word,, Confidence: 1.00
+Text: chunks, Confidence: 1.00
+Text: at, Confidence: 1.00
+Text: a, Confidence: 1.00
+Text: time!, Confidence: 1.00
+Text: There, Confidence: 1.00
+Text: was, Confidence: 0.99
+Text: als0, Confidence: 0.94
+Text: a, Confidence: 1.00
+Text: Iot of other things going, Confidence: 0.67
+Text: on, Confidence: 0.94
+Text: with, Confidence: 1.00
+Text: their slides ,, Confidence: 0.57
+Text: Iike, Confidence: 0.54
+Text: a, Confidence: 0.91
+Text: template, Confidence: 0.97
+Text: that, Confidence: 1.00
+Text: took, Confidence: 1.00
+Text: up, Confidence: 1.00
+Text: a lot f, Confidence: 0.89
+Text: space and Visuals used in, Confidence: 0.86
+Text: a, Confidence: 1.00
+Text: Iess-than-effective, Confidence: 0.59
+Text: way., Confidence: 0.99
+Text: 1ended, Confidence: 0.85
+Text: up minimizing, Confidence: 1.00
+Text: the, Confidence: 1.00
+Text: webinar, Confidence: 0.94
+Text: and, Confidence: 1.00
+Text: just, Confidence: 1.00
+Text: listening, Confidence: 0.94
+Text: because, Confidence: 1.00
+Text: 1couldn't, Confidence: 0.95
+Text: stand, Confidence: 1.00
+Text: it, Confidence: 1.00
+Text: any longer., Confidence: 1.00
+
+Summary of All Frames
+==================================================
+Total Frames Processed: 4
+Frames with Text: 4
+Frames without Text: 0
+All Extracted Text:
+- Title Slide.
+- should introduce the persoh you're
+- writing your biagraphy about. You must type
+- his/her name in the text box at the
+- of
+- the screen_
+- and add a picture of the person
+- You will want to keep the title slide simple:
+- You
+- top
+- Executive Summary Template
+- with Market and Competitive Landscape Insights,
+- Issues and
+- Challenges, Achievements
+- Market
+- Write vourtext here: This is a placeholder Write vour text
+- here. This is a placeholder Write yourtext here, This is a
+- Description
+- placeholder Write your text here 
+- Write vour text here: This is a placeholder Write your text
+- Competitive
+- here. This is
+- placeholder Write yourtext here. This is a
+- Landscape
+- placeholder; Write your text here
+- Issues and
+- Write your text here: This is a placeholder: Write your text
+- here. This Is
+- placeholder: Write yourtext here: This is a
+- Challenges
+- placeholder Write
+- text here_
+- Main
+- Write vourtext here: This is a placeholder Write vour text
+- here. This is a placeholder Write yourtext here, This is a
+- Achievements
+- placeholder Write your text here 
+- your
+- B
+- How to write some text here
+- Name of the Title
+- Presented by Author Name
+- Supervisor:supervisor name
+- Name of Department
+- ABC Institute of Technology
+- 1often
+- tell people
+- that they should
+- not
+- treat
+- their slides
+- as
+- their speaker
+- notes_
+- Most people
+- think that might be
+- an
+- exaggeration .
+- However, |
+- RECENTLY
+- watched
+- a
+- webinar
+- where
+- the presenter
+- literally
+- had
+- all of their speaker
+- notes
+- on
+- the
+- slides_
+- EVERY
+- SINGLE
+- WORD they said
+- was
+- on
+- the
+- screen
+- In
+- short paragraph s
+- Iike this .
+- We all had
+- to
+- read
+- their
+- whole presentation ,
+- word
+- for
+- word,
+- chunks
+- at
+- a
+- time!
+- There
+- was
+- als0
+- a
+- Iot of other things going
+- on
+- with
+- their slides ,
+- Iike
+- a
+- template
+- that
+- took
+- up
+- a lot f
+- space and Visuals used in
+- a
+- Iess-than-effective
+- way.
+- 1ended
+- up minimizing
+- the
+- webinar
+- and
+- just
+- listening
+- because
+- 1couldn't
+- stand
+- it
+- any longer.
+
+BART Summary:
+Title Slide. should introduce the persoh you're writing your biagraphy about. You must type his/her name in the text box at the of the screen_ and add a picture of the person. You will want to keep the title slide simple: You top Executive Summary Template with Market and Competitive Landscape Insights, Issues and Challenges, Achievements.
