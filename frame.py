@@ -1,3 +1,4 @@
+#frame
 import easyocr
 import cv2
 import numpy as np
